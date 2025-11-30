@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Make a difference in a child’s life. Your donation provides safety, support, and hope for children in need." />
+    <link rel="icon" type="image/png" href="images/favicon-Oh-Love-Ya-Dawn.png" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <script src="app.js" defer></script>
+
+    <title>Oh! Love Ya Dawn - Donate</title>
+  </head>
+  <body>
+    <!--Navigation-->
+    <section class="blackBg">
+      <div class="navBox maxWidth">
+        <div class="logoContainer">
+          <a href="index.html"><img src="images/Oh-Love-Ya-Dawn-Linear.png" alt="Oh Love Ya Dawn logo" /></a>
+        </div>
+
+        <!-- Hamburger Button (Mobile Only) -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="nav-container" id="mobileMenu">
+          <a href="donate.html" style="background: #be2d63">DONATE</a>
+          <a href="https://www.ohloveya.com/ediesdawn">EDIE'S DAWN</a>
+          <a href="tel:7632202551">763-220-2551</a>
+        </nav>
+      </div>
+    </section>
+
+    <!--Donate Form-->
+    <section class="donationFormSection">
+      <div class="donateContainer maxWidth">
+        <div class="form-container">
+          <div class="form-header">
+            <h1>Donate Today</h1>
+            <p>Your anonymous contribution helps those in need</p>
+          </div>
+
+          <form id="donationForm">
+            <div class="form-group">
+              <label for="donationAmount">Donation Amount</label>
+              <div class="amount-options">
+                <button type="button" class="amount-btn" data-amount="10">$10</button>
+                <button type="button" class="amount-btn active" data-amount="25">$25</button>
+                <button type="button" class="amount-btn" data-amount="50">$50</button>
+                <button type="button" class="amount-btn" data-amount="100">$100</button>
+              </div>
+              <div class="custom-amount">
+                <span class="currency-symbol">$</span>
+                <input type="number" id="donationAmount" placeholder="Custom amount" min="1" step="1" class="donationInputs" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="donationFrequency">Donation Frequency</label>
+              <div class="toggle-container">
+                <input type="radio" id="oneTime" name="donationFrequency" value="oneTime" checked="" class="donationInputs" />
+                <label for="oneTime" class="toggle-btn">One-time</label>
+
+                <input type="radio" id="monthly" name="donationFrequency" value="monthly" class="donationInputs" />
+                <label for="monthly" class="toggle-btn">Monthly</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="paymentMethod">Payment Method</label>
+              <div class="payment-options">
+                <div class="payment-option">
+                  <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" checked="" class="donationInputs" />
+                  <label for="creditCard">
+                    <span class="payment-icon credit-card-icon"></span>
+                    Credit Card
+                  </label>
+                </div>
+                <div class="payment-option">
+                  <input type="radio" id="paypal" name="paymentMethod" value="paypal" class="donationInputs" />
+                  <label for="paypal">
+                    <span class="payment-icon paypal-icon"></span>
+                    PayPal
+                  </label>
+                </div>
+                <div class="payment-option">
+                  <input type="radio" id="crypto" name="paymentMethod" value="crypto" class="donationInputs" />
+                  <label for="crypto">
+                    <span class="payment-icon crypto-icon"></span>
+                    Cryptocurrency
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" id="creditCardFields">
+              <div class="card-fields">
+                <div class="form-row">
+                  <div class="input-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" class="donationInputs" />
+                  </div>
+                </div>
+                <div class="form-row two-columns">
+                  <div class="input-group">
+                    <label for="expiryDate">Expiry Date</label>
+                    <input type="text" id="expiryDate" placeholder="MM/YY" class="donationInputs" />
+                  </div>
+                  <div class="input-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" placeholder="123" class="donationInputs" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group hidden" id="cryptoFields">
+              <label for="cryptoAddress">Send to this wallet address:</label>
+              <div class="crypto-address">
+                <input type="text" id="cryptoAddress" value="0x1a2b3c4d5e6f7g8h9i0j" readonly="" class="donationInputs" />
+                <button type="button" id="copyAddress" class="icon-btn copy-btn">Copy</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Leave a Message (Optional)</label>
+              <textarea id="message" rows="3" placeholder="Your message..." class="donationInputs"></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="anonymous" checked="" class="donationInputs" />
+              <label for="anonymous">Keep my donation anonymous</label>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="submit-btn">Donate Now</button>
+            </div>
+          </form>
+
+          <div class="secure-notice">
+            <span class="lock-icon"></span>
+            <p>All transactions are secure and encrypted</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <section class="footer">
+      <footer class="maxWidth">
+        <a href="index.html" target="_blank"> <img src="images/Oh-Love-Ya-Dawn-Big.png" alt="Oh Love Ya Dawn Logo" class="footerLogo" /></a>
+        <div class="footerSocials">
+          <a href="#" target="_blank"><img src="images/socials/facebook.png" alt="Follow us on Facebook" class="footerSocial" /></a>
+          <a href="#" target="_blank"><img src="images/socials/instagram.png" alt="Follow us on Instagram" class="footerSocial" /></a>
+          <a href="#" target="_blank"><img src="images/socials/linkedin.png" alt="Follow us on LinkedIn" class="footerSocial" /></a>
+          <a href="#" target="_blank"><img src="images/socials/twitterx.png" alt="Follow us on X" class="footerSocial" /></a>
+          <a href="#" target="_blank"><img src="images/socials/youtube.png" alt="Follow us on YouTube" class="footerSocial" /></a>
+          <a href="tel:7632202551" aria-label="Please Call Us" id="footerNumber">763-220-2551</a>
+        </div>
+        <p class="copyright">&copy; 2025 by Oh! Love Ya Dawn</p>
+      </footer>
+    </section>
+  </body>
+</html>
