@@ -537,6 +537,7 @@ textarea:focus {
   transition: all 0.3s;
   background: transparent;
   color: #666666;
+  margin: 0;
 }
 
 input[type="radio"]:checked + .toggle-btn {
